@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Matej Bukovinski' => 'matej@bukovinski.com' }
   s.source       = { :git => "https://github.com/georgel/MBProgressHUD.git", :tag => s.version.to_s }
   s.platform     = :ios
-  s.source_files = '*.{h,m}'
+  s.source_files = 'MBAlertView/**/*.{h,m}'
   s.framework    = "CoreGraphics"
   s.requires_arc = true
 end
