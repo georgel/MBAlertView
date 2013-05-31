@@ -31,6 +31,7 @@ extern NSString *const MBAlertDidDismissNotification;
 
 // dismisses current hud in queue, whether or not its visible
 + (void)dismissCurrentHUD;
++(void)flushHUD
 + (void)dismissCurrentHUDAfterDelay:(float)delay;
 
 // yes if there is currently an alert or hud on screen

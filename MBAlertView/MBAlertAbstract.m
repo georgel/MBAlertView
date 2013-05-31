@@ -126,6 +126,17 @@ static MBAlertAbstract *currentAlert;
     [[MBAlertAbstract class] performSelector:@selector(dismissCurrentHUD) withObject:nil afterDelay:delay];
 }
 
++(void)flushHUD
+{
+    if(dismissQueue.count > 0)
+    {
+        MBAlertView *current = [dismissQueue lastObject];
+        [displayQueue removeAllObjects];
+        [current dismiss];
+        [dismissQueue removeAllObjects];
+    }
+}
+
 + (BOOL)alertIsVisible {
     if(currentAlert)
         return YES;
